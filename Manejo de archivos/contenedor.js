@@ -9,6 +9,7 @@ class Contenedor {
     try {
       const contenido = await fs.promises.readFile(this.fileName, "utf-8");
       let object = JSON.parse(contenido);
+      console.log(object);
       return object;
     } catch (err) {
       return console.log("Error de lectura", err);
@@ -28,7 +29,7 @@ class Contenedor {
       if (err) {
         console.log("Error al crear el archivo", err);
       } else {
-        console.log("El archivo se creo correctamente");
+        console.log("El archivo se creo correctamente", this.getAll());
       }
     });
   }
@@ -39,7 +40,7 @@ class Contenedor {
         if (err) {
           console.log("Error al borrar los productos", err);
         } else {
-          console.log("Los productos se borraron correctamente");
+          console.log("Los productos se borraron correctamente", this.getAll());
         }
       });
 }
@@ -69,7 +70,7 @@ async deleteById(numId){
         console.log("el Id no corresponde a un producto válido");
         
     } else {
-        console.log("se borro el producto correctamente");
+        console.log("se borro el producto correctamente", this.getAll());
     }
     
   } catch (err) {
@@ -77,5 +78,4 @@ async deleteById(numId){
   }
 }
 }
-
-module.exports.Contenedor = Contenedor;
+module.exports = Contenedor;

@@ -1,6 +1,6 @@
 const express = require('express')
 const Contenedor = require('./contenedor.js')
-let archivo1 = new Contenedor.Contenedor("./productos.json");
+let archivo1 = new Contenedor("./productos.json");
 
 
 const PORT = 8080
