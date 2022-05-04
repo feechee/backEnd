@@ -4,13 +4,13 @@ class Contenedor {
   }
 
   getId(id) {
-      let prodId = {}
-    this.productos.map((producto)=>{
-        if (producto.id == id) {
-            prodId = producto
-        }
-    })
-    return prodId
+    let prodId = {};
+    this.productos.map((producto) => {
+      if (producto.id == id) {
+        prodId = producto;
+      }
+    });
+    return prodId;
   }
 
   postProducts(req) {
@@ -39,23 +39,23 @@ class Contenedor {
     return this.productos;
   }
 
-  deleteProducts(req){
-    const { id } = req.params
-    this.productos.map((producto, i)=>{
-        if(producto.id == id){
-            this.productos.splice(i, 1)
-        }
-    })
-    return this.productos
+  deleteProducts(req) {
+    const { id } = req.params;
+    this.productos.map((producto, i) => {
+      if (producto.id == id) {
+        this.productos.splice(i, 1);
+      }
+    });
+    return this.productos;
   }
 
-  errorMsg(foo, req){
-    const { id } = req.params
+  errorMsg(foo, req) {
+    const { id } = req.params;
     const idExist = this.productos.find((producto) => producto.id == id);
     if (idExist) {
-       return foo
+      return foo;
     } else {
-        return { error: "producto no encontrado" }
+      return { error: "producto no encontrado" };
     }
   }
 }
