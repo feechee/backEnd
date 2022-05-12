@@ -27,7 +27,6 @@ class Contenedor {
 
   putPorducts(req) {
     const { id } = req.params;
-    const idExist = this.productos.find((producto) => producto.id == id);
     const { title, price, thumbnail } = req.body;
     this.productos.map((producto) => {
       if (producto.id == id) {

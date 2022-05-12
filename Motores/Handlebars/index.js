@@ -23,7 +23,6 @@ router.get("/", (req, res) => {
 
 router.get("/productos", (req, res) => {
   res.render('productos', {productos: productos});
-  console.log(productos);
 });
 
 router.get("/:id", (req, res) => {

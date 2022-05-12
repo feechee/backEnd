@@ -1,4 +1,3 @@
-const { stringify } = require("querystring");
 
 class Contenedor {
   constructor(productos) {
