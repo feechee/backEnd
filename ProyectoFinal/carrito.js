@@ -8,8 +8,8 @@ class Carrito {
   async getAll() {
     try {
       const contenido = await fs.promises.readFile(this.fileName, "utf-8");
-      let object = JSON.parse(contenido);
-      return object;
+      let object = await JSON.parse(contenido);
+      return object
     } catch (err) {
       return console.log("Error de lectura", err);
     }
@@ -78,10 +78,12 @@ class Carrito {
     return carritoId;
   }
 
+  //Para crear un productos se debe enviar un objeto producto con el valor del ID del producto   ej: POST { "producto": 1 }
   async postProductos(id, req, prod) {
     const carrito = await this.getAll();
     const productos = await prod;
     let carrito_actual = {};
+    console.log(req.body.producto);
     productos.map((element) => {
       if (element.id == req.body.producto) {
         carrito.map((e) => {

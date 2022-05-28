@@ -18,5 +18,15 @@
     "foto": "url",
     "precio": "60000",
     "stock": "14"
+  },
+  {
+    "id": 3,
+    "timestamp": 1653773917652,
+    "nombre": "mosqueton",
+    "descripcion": "para escalar",
+    "codigo": "456",
+    "foto": "url",
+    "precio": "20000",
+    "stock": "30"
   }
 ]
