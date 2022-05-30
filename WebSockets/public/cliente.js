@@ -9,12 +9,25 @@ function addMessage (e) {
     return false
  }
 
-function render (data) { 
+ function addProducto() {
+     const producto = {
+         title: document.getElementById('title').value,
+         price: document.getElementById('price').value,
+         thumbnail: document.getElementById('thumbnail').value
+     }
+     socket.emit('new-producto', producto)
+     return false
+ }
+
+function renderMsg (data) {
+    
     const html = data.map((elem)=>{
+        
         return(`
-        <div>
-            <strong>${elem.author}</strong>
-            <em>${elem.message}</em>
+        <div class="contenedorMensaje">
+            <strong class="email">${elem.author}</strong>
+            <p class="fecha"">${elem.date}</p>
+            <em class="mensaje">: ${elem.message}</em>
         </div>
         `)
     }).join(' ')
@@ -22,4 +35,17 @@ function render (data) {
     document.getElementById('messages').innerHTML = html
  }
 
-socket.on('messages', data =>{render(data)})
+async function renderTable (data) {
+    const html =await data.map((elem)=>{
+        return(`<tr>
+                    <td>${elem.title}</td>
+                    <td>${elem.price}</td>
+                    <td>${elem.thumbnail}</td>
+                </tr>`)  
+    }).join(" ")
+
+    document.getElementById('products').innerHTML =await html
+ }
+
+socket.on('messages', data =>{renderMsg(data)})
+socket.on('productos',async data =>{ await renderTable(data)})

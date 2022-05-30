@@ -26,7 +26,7 @@ class Productos {
     return prodId;
   }
 
- async postProducts(req) {
+ async postProducts(data) {
     const productos = await this.getAll()
     let newId = 0;
     if (productos.length == 0) {
@@ -34,8 +34,7 @@ class Productos {
     } else {
       newId = productos[productos.length - 1].id +1;
     }
-    const fecha = this.formatDate(new Date())
-    productos.push({ id: newId, timestamp: fecha, ...req.body });
+    productos.push({ id: newId, ...data });
 
     fs.writeFile(this.fileName, JSON.stringify(productos, null, 2), (err) => {
         if (err) {
@@ -103,27 +102,6 @@ class Productos {
       return { error: "producto no encontrado" };
     }
   }
-
-   padTo2Digits(num) {
-    return num.toString().padStart(2, '0');
-  }
-  
-   formatDate(date) {
-    return (
-      [
-        date.getFullYear(),
-        this.padTo2Digits(date.getMonth() + 1),
-        this.padTo2Digits(date.getDate()),
-      ].join('-') +
-      ' ' +
-      [
-        this.padTo2Digits(date.getHours()),
-        this.padTo2Digits(date.getMinutes()),
-        this.padTo2Digits(date.getSeconds()),
-      ].join(':')
-    );
-  }
-
 }
 
 module.exports = Productos;

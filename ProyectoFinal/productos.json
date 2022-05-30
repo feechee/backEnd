@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "timestamp": 524234234,
+    "timestamp": "2022-05-20 16:41:47",
     "nombre": "arnes",
     "descripcion": "para escalar",
     "codigo": "528",
@@ -11,7 +11,7 @@
   },
   {
     "id": 2,
-    "timestamp": 5242342332,
+    "timestamp": "2022-05-20 16:42:10",
     "nombre": "cuerda",
     "descripcion": "para escalar",
     "codigo": "232",
@@ -21,7 +21,7 @@
   },
   {
     "id": 3,
-    "timestamp": 1653773917652,
+    "timestamp": "2022-05-20 16:43:24",
     "nombre": "mosqueton",
     "descripcion": "para escalar",
     "codigo": "456",

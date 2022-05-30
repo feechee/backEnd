@@ -1,0 +1,42 @@
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px;
+    padding: 25px;
+    background-color: rgb(192, 255, 91);
+    border-radius: 25px;
+}
+
+.formulario {
+    height: 300px;
+    width: 300px;
+    margin-bottom: 25px;
+}
+
+.tabla{
+    width: 500px;
+    margin-bottom: 25px;
+}
+
+.chat{
+    width: 100%;
+    background-color: rgb(178, 149, 198);
+    border-radius: 25px;
+    padding: 50px;
+}
+
+.contenedorMensaje{
+    display: flex;
+    flex-direction: row;
+}
+
+.email{
+    color: blue;
+}
+.fecha{
+    color: brown;
+}
+.mensaje{
+    color: green;
+}
