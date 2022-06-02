@@ -12,9 +12,9 @@ sqlDb: {
 sqlite3: {
   client: "sqlite3",
     connection: {
-      filename: "./mydb.sqlite"
+      filename: "./db/mydb.sqlite"
     },
-  UseNullAsDefault: true
+  useNullAsDefault: true
 }
 
 }
