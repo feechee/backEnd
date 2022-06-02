@@ -1,56 +1,35 @@
-const express = require("express");
-const { Server: HttpServer } = require("http");
-const { Server: IOServer } = require("socket.io");
-const { options } = require("./options/mysqlconn.js");
-const Productos = require("./productos.js");
-/* const Mensajes = require("./mensajes"); */
+import express from "express";
+import { createServer } from "http";
+import { Server } from "socket.io";
+import  options  from "./options/connection.js";
+import Productos from "./productos.js";
+import Mensajes from "./mensajes.js"
+
 const app = express();
-const httpServer = new HttpServer(app);
-const io = new IOServer(httpServer);
-/* let newMensaje = new Mensajes("./mensajes.json"); */
+const httpServer = createServer(app);
+const io = new Server(httpServer);
 
-const newProducto = new Productos(options);
+app.use(express.static("./public"));
 
-try {async ()=>{
-  await newProducto.crearTabla();
+let newProducto = new Productos(options.sqlDb);
+let newMensaje = new Mensajes(options.sqlite3)
 
-  const productos = [
-    {
-      title: "caja",
-      price: 50,
-      thumbnail: "foto",
-    },
-  ];
-  await newProducto.insertarProductos(productos);
-
-  const articulosLeidos = await newProducto.listarProductos();
-  console.table(articulosLeidos);
-}
-
-} catch (err) {
-  console.log(err);
-} finally {
-  newProducto.close();
-}
-
-/* app.use(express.static("./public"));
-
+newMensaje.crearTabla()
 io.on("connection", async (socket) => {
   console.log("Cliente conectado");
-  socket.emit("messages", await newMensaje.getAll());
-  socket.on("new-message",async (data) => {
-    await newMensaje.postMensajes(data)
-    io.sockets.emit("messages",await newMensaje.getAll());
-  });
-  socket.emit("productos",await newProducto.getAll())
+  socket.emit("productos",await newProducto.listarProductos() )
   socket.on("new-producto",async (data) => {
-   await newProducto.postProducts(data);
-    io.sockets.emit("productos",await newProducto.getAll());    
+   await newProducto.insertarProductos(data);
+    io.sockets.emit("productos",await newProducto.listarProductos());    
+  });
+  socket.emit("messages", await newMensaje.listarMensajes());
+  socket.on("new-message",async (data) => {
+    await newMensaje.insertarMensajes(data)
+    io.sockets.emit("messages",await newMensaje.listarMensajes());
   });
 });
-
 
 const PORT = 8080;
 httpServer.listen(PORT, () => {
   console.log("Servidor iniciado en el puerto:", PORT);
-}); */
+});
