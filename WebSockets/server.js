@@ -9,11 +9,6 @@ const io = new IOServer(httpServer);
 let newProducto = new Productos("./productos.json");
 let newMensaje = new Mensajes("./mensajes.json");
 
-const messages = [
-  { author: "Juan", message: "Hola, como va?" },
-  { author: "Pedro", message: "Todo bien, vos?" },
-  { author: "Juan", message: "Que bueno!" },
-];
 
 app.use(express.static("./public"));
 

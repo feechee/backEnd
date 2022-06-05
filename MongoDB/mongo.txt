@@ -1,0 +1,45 @@
+------------------------------------------------------------------------------------------------------------------------------
+1-2
+db.productos.insertMany([{title:"casco", price:2300, thumbnail:"foto"},{title:"arnes", price:4500, thumbnail:"foto"},{title:"cuerda", price:4900, thumbnail:"foto"},{title:"mosqueton", price:900, thumbnail:"foto"},{title:"pedulas", price:1700, thumbnail:"foto"},{title:"asegurador", price:1250, thumbnail:"foto"},{title:"cordin", price:520, thumbnail:"foto"},{title:"maillon", price:135, thumbnail:"foto"},{title:"express", price:3200, thumbnail:"foto"},{title:"pantalon", price:3200, thumbnail:"foto"}])
+
+db.mensajes.insertMany([{date:"05-06-2022 12:30", author:"Federico", message:"Te consulto por un producto"},{date:"05-06-2022 12:32", author:"Carlos", message:"Buenos dias"},{date:"05-06-2022 12:40", author:"Carlos", message:"Cuanto to demora el envio?"},{date:"05-06-2022 12:30", author:"Jose", message:"Buenas Tardes"},{date:"03-06-2022 12:30", author:"Jose", message:"Hacen envios al interior?"},{date:"02-06-2022 12:30", author:"Marcela", message:"Buenas"},{date:"01-06-2022 12:30", author:"Marcela", message:"Donde queda el local?"},{date:"12-05-2022 12:30", author:"Laura", message:"Buenos dias"},{date:"12-06-2022 12:30", author:"Claudia", message:"Buenas noches"},{date:"12-05-2022 12:30", author:"Raul", message:"cuanto demora el envio?"}])
+-----------------------------------------------------------------------------------------------------------------------------
+3
+
+db.productos.find()
+db.mensajes.find()
+
+----------------------------------------------------------------------------------------------------------------------------
+4
+db.productos.estimatedDocumentCount()
+db.mensajes.estimatedDocumentCount()
+
+----------------------------------------------------------------------------------------------------------------------------
+5a
+db.productos.insertOne({title:"remera", price:1400, thumbnail:"foto"})
+
+----------------------------------------------------------------------------------------------------------------------------
+5b i
+
+db.productos.find({price: {$lt:1000}})
+
+----------------------------------------------------------------------------------------------------------------------------
+5b ii
+
+db.productos.find({$and: [{price: {$gt:1000}},{price: {$lt:3000}}]})
+
+----------------------------------------------------------------------------------------------------------------------------
+5b iii
+
+db.productos.find({price: {$gt:3000}})
+
+----------------------------------------------------------------------------------------------------------------------------
+5b iv
+
+db.productos.find({},{title:1, _id:0}).sort({price:1}).limit(1).skip(2)
+
+---------------------------------------------------------------------------------------------------------------------------
+5c
+
+db.productos.update({},{$set:{"stock":100}},{upsert:false,multi:true})
+

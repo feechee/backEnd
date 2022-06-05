@@ -15,6 +15,8 @@ let newProducto = new Productos(options.sqlDb);
 let newMensaje = new Mensajes(options.sqlite3)
 
 newMensaje.crearTabla()
+
+
 io.on("connection", async (socket) => {
   console.log("Cliente conectado");
   socket.emit("productos",await newProducto.listarProductos() )
