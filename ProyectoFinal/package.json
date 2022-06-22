@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "proyecto backend",
   "main": "carrito.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -11,7 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1",
+    "firebase-admin": "^11.0.0",
     "fs": "^0.0.1-security",
+    "mongoose": "^6.3.6",
     "node": "^17.7.2"
-  }
+  },
+  "keywords": []
 }

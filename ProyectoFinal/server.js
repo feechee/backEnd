@@ -1,10 +1,11 @@
-const express = require("express");
+import express from "express";
 const app = express();
 
 
 //Routes
-const carritoRoute = require("./routes/carrito");
-const productosRoute = require("./routes/productos");
+import productosRoute from './routes/productosMD.js'
+import carritoRoute from './routes/carritoFB.js'
+
 
 //Middlewares
 app.use(express.json());

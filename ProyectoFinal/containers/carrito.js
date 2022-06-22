@@ -83,7 +83,6 @@ class Carrito {
     const carrito = await this.getAll();
     const productos = await prod;
     let carrito_actual = {};
-    console.log(req.body.producto);
     productos.map((element) => {
       if (element.id == req.body.producto) {
         carrito.map((e) => {

@@ -1,9 +1,9 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
-const Carrito = require("../carrito");
-let newCarrito = new Carrito("./carrito.json");
-const Productos = require("../productos");
-let newProducto = new Productos("./productos.json");
+import CarritoFB from '../containers/carritoFB.js'
+let newCarrito = new CarritoFB();
+import ProductosMD  from '../containers/productosMD.js'
+let newProducto = new ProductosMD();
 const productos = newProducto.getAll();
 
 router.get("/", async (req, res) => {
@@ -20,7 +20,8 @@ router.get("/", async (req, res) => {
   });
   
   router.delete("/:id", async (req, res) => {
-    res.send(await newCarrito.deleteCarrito(req));
+    const { id } = req.params;
+    res.send(await newCarrito.deleteCarrito(id));
   });
   
   router.get("/:id/productos", async (req, res) => {
@@ -34,6 +35,9 @@ router.get("/", async (req, res) => {
     });
   
     router.delete("/:id/productos/:id_prod", async (req, res) => {
-      res.send(await newCarrito.deleteProductos(req));
+        const { id, id_prod } = req.params
+      res.send(await newCarrito.deleteProductos(id, id_prod, productos));
     });
-    module.exports = router
+    
+
+    export default router;
