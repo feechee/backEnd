@@ -35,20 +35,6 @@ class UsuariosRouter extends express.Router {
                 next(error);
             }
         })
-        this.put('/:id', async (req, res, next) => {
-            try {
-                res.json(await apiUsuarios.actualizar({...req.body, id: req.params.id}));
-            } catch (error) {
-                next(error);
-            }
-        })
-        this.delete('/:id', async (req, res, next) => {
-            try {
-                res.json(await apiUsuarios.borrar(req.params.id));
-            } catch (error) {
-                next(error);
-            }
-        })
     }
 }
 

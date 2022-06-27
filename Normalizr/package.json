@@ -10,11 +10,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "firebase": "^9.8.4",
+    "firebase-admin": "^11.0.0",
+    "fs": "^0.0.1-security",
     "knex": "^2.1.0",
     "mysql": "^2.18.1",
-    "sqlite3": "^5.0.8"
+    "node-fetch": "^3.2.6",
+    "normalizr": "^3.6.2",
+    "sqlite3": "^5.0.8",
+    "util": "^0.12.4"
   },
   "keywords": [],
-  "devDependencies": {},
+  "devDependencies": {
+    "@faker-js/faker": "^7.3.0"
+  },
   "description": ""
 }
