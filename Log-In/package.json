@@ -1,0 +1,32 @@
+{
+  "name": "sql_node",
+  "version": "1.0.0",
+  "main": "insertUser.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect-mongo": "^4.6.0",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "firebase": "^9.8.4",
+    "firebase-admin": "^11.0.0",
+    "fs": "^0.0.1-security",
+    "handlebars": "^4.7.7",
+    "knex": "^2.1.0",
+    "mysql": "^2.18.1",
+    "node-fetch": "^3.2.6",
+    "normalizr": "^3.6.2",
+    "sqlite3": "^5.0.8",
+    "util": "^0.12.4"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "@faker-js/faker": "^7.3.0"
+  },
+  "description": ""
+}

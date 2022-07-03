@@ -4,11 +4,6 @@ import { Server } from "socket.io";
 import ProductosRouter from "./router/productos.js";
 import Mensajes from "./containers/mensajes.js"
 
-
-
-
-
-
 const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer);

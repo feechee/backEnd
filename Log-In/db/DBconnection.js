@@ -17,4 +17,3 @@ const db = admin.firestore();
 const query = db.collection("mensajes");
 
 export default query;
-
