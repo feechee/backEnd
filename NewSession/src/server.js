@@ -6,7 +6,9 @@ import './config/passport.js'
 import exphbs from 'express-handlebars'
 import routerVista from "./router/vistas.routes.js";
 import routerProductos from './router/productos.routes.js';
+import routerInfo from './router/info.routes.js';
 import routerUsers from './router/users.routes.js';
+import routerRandom from './router/random.routes.js';
 import { createServer } from "http";
 import { Server } from "socket.io";
 import Mensajes from "./containers/mensajes.js"
@@ -14,6 +16,10 @@ import MongoStore from 'connect-mongo'
 import session from 'express-session'
 import passport from 'passport';
 import flash from 'connect-flash';
+import dotenv from 'dotenv'
+import PORT from './config/yargs.js'
+
+
 
 
 
@@ -23,8 +29,9 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 const httpServer = createServer(app);
 const io = new Server(httpServer);
 const advancedOptions = {useNewUrlParser: true, useUnifiedTopology: true }
+dotenv.config()
 //Settings
-app.set('port', process.env.PORT || 8080);
+app.set('port',PORT);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', exphbs.engine({
     defaultLayout:'main',
@@ -39,7 +46,7 @@ app.use(
   session({
 
     store: MongoStore.create({
-        mongoUrl:"mongodb+srv://coderhouse:coderhouse@cluster0.vdc3e6x.mongodb.net/sessions?retryWrites=true&w=majority",
+        mongoUrl: process.env.MONGO_SESSION,
         mongoOptions: advancedOptions,
         ttl: 10000,
     }),
@@ -65,6 +72,8 @@ const newMensaje = new Mensajes()
 app.use(routerVista);
 app.use(routerProductos);
 app.use(routerUsers)
+app.use(routerInfo)
+app.use(routerRandom)
 //Static files
 app.use(express.static(path.join(__dirname, 'public')))
 

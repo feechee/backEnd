@@ -3,7 +3,7 @@ import fs from "fs";
 
 const serviceAccount = JSON.parse(
   fs.readFileSync(
-    "./src/db/normalizr-54cc6-firebase-adminsdk-4luqz-6e73ea689e.json"
+    process.env.FIREBASE_PATH
   )
 );
 

@@ -1,10 +1,14 @@
 import mongoose from "mongoose";
 import * as models from "../models/usuarios.js";
+import dotenv from 'dotenv'
+
+dotenv.config()
+
 
 async function conection() {
     try {
       const URL =
-        "mongodb+srv://coderhouse:coderhouse@cluster0.vdc3e6x.mongodb.net/?retryWrites=true&w=majority";
+        process.env.MONGO_URL;
   
       let conexion = await mongoose.connect(URL);
   

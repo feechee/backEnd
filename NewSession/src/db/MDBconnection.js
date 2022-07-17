@@ -1,9 +1,12 @@
 import mongoose from 'mongoose'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 async function connection() {
     try {
       const URL =
-        "mongodb+srv://coderhouse:coderhouse@cluster0.vdc3e6x.mongodb.net/?retryWrites=true&w=majority";
+        process.env.MONGO_URL;
   
       let conexion = await mongoose.connect(URL);
   
