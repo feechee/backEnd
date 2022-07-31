@@ -1,4 +1,5 @@
 import os from "os"
+import logger from "../utils/logger.js";
 
 const numCpus = os.cpus().length
 const infoCtrl = {};
@@ -13,6 +14,7 @@ const carpeta = process.argv[1]
 
 
 infoCtrl.renderInfo = (req, res) => {
+    logger.info('Petición en ruta /info')
     res.render('info',{ argumentos: args, plataforma: plataforma, version: version, memoria: memoria, id: pid, carpeta: carpeta, ejecutable: ejecutable, cant_cpus: numCpus })
   } 
     

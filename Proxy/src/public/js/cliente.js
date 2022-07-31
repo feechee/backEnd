@@ -1,5 +1,7 @@
+import { io } from "https://cdn.socket.io/4.4.1/socket.io.esm.min.js";
 
-const socket = io.connect();
+const socket = io.connect()
+
 
 fetch("api/productos-test")
   .then((response) => response.json())

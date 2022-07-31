@@ -10,7 +10,7 @@ async function connection() {
   
       let conexion = await mongoose.connect(URL);
   
-      console.log("coneccion a mongodb correcta");
+      console.log("conexion a mongodb correcta");
     } catch (err) {
       console.log("error: ", err);
     }

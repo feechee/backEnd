@@ -15,6 +15,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cluster": "^0.7.7",
+    "compression": "^1.7.4",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^4.6.0",
     "express": "^4.18.1",
@@ -28,8 +29,10 @@
     "normalizr": "^3.6.2",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
+    "pino": "^8.3.1",
     "socket.io": "^4.5.1",
-    "socket.io-client": "^4.5.1"
+    "socket.io-client": "^4.5.1",
+    "winston": "^3.8.1"
   },
   "devDependencies": {
     "@faker-js/faker": "^7.3.0",

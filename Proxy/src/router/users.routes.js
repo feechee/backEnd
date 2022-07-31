@@ -1,20 +1,21 @@
 import { Router } from 'express'
 import userCtrl from '../controllers/users.controller.js';
+import compression from 'compression'
 
 const routerUsers = Router()
 
 
-routerUsers.get('/users/signup', userCtrl.renderSignUpForm)
+routerUsers.get('/users/signup', compression(), userCtrl.renderSignUpForm)
 
-routerUsers.post('/users/signup', userCtrl.signUp)
+routerUsers.post('/users/signup', compression(), userCtrl.signUp)
 
-routerUsers.get('/users/signin', userCtrl.rendersignInForm)
+routerUsers.get('/users/signin', compression(), userCtrl.rendersignInForm)
 
-routerUsers.post('/users/signin', userCtrl.signIn)
+routerUsers.post('/users/signin', compression(), userCtrl.signIn)
 
-routerUsers.get('/users/logout', userCtrl.logOut)
+routerUsers.get('/users/logout', compression(), userCtrl.logOut)
 
-routerUsers.get('/users/signin-error', userCtrl.signInError)
+routerUsers.get('/users/signin-error',compression(), userCtrl.signInError)
 
 
 export default routerUsers;

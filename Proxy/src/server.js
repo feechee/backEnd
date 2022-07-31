@@ -18,9 +18,7 @@ import passport from 'passport';
 import flash from 'connect-flash';
 import dotenv from 'dotenv'
 import { PORT } from './config/yargs.js'
-
-
-
+import logger from './utils/logger.js';
 
 
 //Initializations
@@ -74,6 +72,12 @@ app.use(routerProductos);
 app.use(routerUsers)
 app.use(routerInfo)
 app.use(routerRandom)
+
+app.all('*', (req, res) => {
+  const { url, method } = req
+  logger.warn(`Ruta ${method} ${url} no implementada`)
+  res.send(`Ruta ${method} ${url} no implementada`)
+})
 //Static files
 app.use(express.static(path.join(__dirname, 'public')))
 
