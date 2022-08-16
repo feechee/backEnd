@@ -3,7 +3,7 @@ class VistasRouter extends express.Router {
     constructor(app) {
         super()
         
-        this.get('/'), (req, res) =>{
+        this.get('/index'), (req, res) =>{
             res.render( 'login', {layout : 'index'})
         }
 
@@ -14,7 +14,7 @@ class VistasRouter extends express.Router {
         this.post('/login',async (req, res) =>{
             req.session.nombre = await req.body.nombre || "Anónimo"
             console.log(req.body.nombre)
-            res.redirect('/')
+            res.redirect('/index')
             })
 
         this.get('/log', async(req, res) =>{

@@ -17,7 +17,6 @@ import session from 'express-session'
 import passport from 'passport';
 import flash from 'connect-flash';
 import dotenv from 'dotenv'
-import { PORT } from './config/yargs.js'
 import logger from './utils/logger.js';
 
 
@@ -32,7 +31,7 @@ const io = new Server(httpServer);
 const advancedOptions = {useNewUrlParser: true, useUnifiedTopology: true }
 dotenv.config()
 //Settings
-app.set('port',PORT);
+app.set('port', provess.env.PORT || 8080);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', exphbs.engine({
     defaultLayout:'main',

@@ -7,7 +7,7 @@ class ProductosRouter extends express.Router {
 
         const apiProductos = new Productos();
 
-        this.get('/', async (req, res, next) => {
+        this.get('/index', async (req, res, next) => {
             try {
                 res.json(await apiProductos.listarTodos());
             } catch (error) {
