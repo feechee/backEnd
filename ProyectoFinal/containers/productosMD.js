@@ -1,23 +1,5 @@
-import mongoose from "mongoose";
 import * as models from "../models/productos.js";
-
-//---------------------------------------------------------------------------------------------------------------------
-//Conexion a base de datos MongoDB
-async function conection() {
-  try {
-    const URL =
-      "mongodb+srv://coderhouse:coderhouse@cluster0.vdc3e6x.mongodb.net/?retryWrites=true&w=majority";
-
-    let conexion = await mongoose.connect(URL);
-
-    console.log("coneccion a mongodb correcta");
-  } catch (err) {
-    console.log("error: ", err);
-  }
-}
-conection();
-
-//--------------------------------------------------------------------------------------------------------------------------
+import logger from "../utils/logger.js";
 
 class ProductosMD {
   constructor() {}
@@ -27,7 +9,7 @@ class ProductosMD {
       const contenido = await models.productos.find();
       return contenido;
     } catch (err) {
-      return console.log("Error de lectura", err);
+      return logger.error("Error de lectura", err);
     }
   }
 
@@ -37,7 +19,7 @@ class ProductosMD {
       const contenido = await models.productos.findOne({ _id: id });
       return contenido;
     } catch (err) {
-      return console.log("Error de lectura", err);
+      return logger.error("Error de lectura", err);
     }
   }
 

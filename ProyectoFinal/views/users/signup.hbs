@@ -1,0 +1,92 @@
+<div class="row">
+  <div class="col-md-4 mx-auto">
+    <div class="card">
+      <div class="card-header">
+        Registrar Usuario
+      </div>
+      <div class="card-body">
+        <form action="/users/signup" method="POST" role="form">
+          <div class="form-group">
+            <label for="exampleInputEmail1" class="form-label">Nombre</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nombre"
+              aria-describedby="emailHelp"
+              name="nombre"
+            />
+            <label for="exampleInputEmail1" class="form-label">E-mail</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              aria-describedby="emailHelp"
+              name="email"
+            />
+            <label
+              for="exampleInputEmail1"
+              class="form-label"
+            >Contraseña</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              aria-describedby="emailHelp"
+              name="password"
+            />
+                        <label
+              for="exampleInputEmail1"
+              class="form-label"
+            >Confirmar contraseña</label>
+            <input
+              type="password"
+              class="form-control"
+              id="confirm_password"
+              aria-describedby="emailHelp"
+              name="confirm_password"
+            />
+            <div id="emailHelp" class="form-text"></div>
+
+            <label for="exampleInputEmail1" class="form-label">Dirección</label>
+            <input
+              type="text"
+              class="form-control"
+              id="direccion"
+              aria-describedby="emailHelp"
+              name="direccion"
+            />
+
+            <label for="exampleInputEmail1" class="form-label">Edad</label>
+            <input
+              type="text"
+              class="form-control"
+              id="edad"
+              aria-describedby="emailHelp"
+              name="edad"
+            />
+
+            <label for="exampleInputEmail1" class="form-label">Telefono</label>
+            <input
+              type="text"
+              class="form-control"
+              id="telefono"
+              aria-describedby="emailHelp"
+              name="telefono"
+            />
+
+            <label for="exampleInputEmail1" class="form-label">Avatar</label>
+            <input
+              type="text"
+              class="form-control"
+              id="avatar"
+              aria-describedby="emailHelp"
+              name="avatar"
+            />
+
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Registrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

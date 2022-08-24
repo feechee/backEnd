@@ -1,0 +1,36 @@
+    <div class="contenedor">
+        <div class="log">
+            <div id="usuario"></div>
+           <h2> {{user}} </h2> 
+            <button class="logOut btn btn-danger my-5" onclick="location.href='/users/logout'">Logout</button>
+        </div>
+        <div>
+            <form action="/api/carrito" method="POST" role="form">
+                <button type="submit" class="btn btn-primary btn-block">Crear Carrito</button>
+            </form>
+            <button onclick="location.href='/api/carrito/{{carrito}}/productos'" class="btn btn-primary btn-block">Ver Carrito</button>
+            <div>
+                <h3>
+                    Carrito actual: {{carrito}}
+                </h3>
+            </div>
+        </div>
+        <div>
+              {{#each productos}}
+                {{#with this}}
+                    <form action="/api/carrito/{{carrito}}/productos/{{id}}" method="post" class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{nombre}}</h5>
+                        <p class="card-text">{{descripcion}}</p>
+                        <p class="card-text">{{precio}}</p>
+                        <button type="submit" class="btn btn-primary">Agregar</button>
+                    </div>
+                    </form>
+                {{/with}}
+             {{/each}}
+        </div>
+
+
+    </div>
+

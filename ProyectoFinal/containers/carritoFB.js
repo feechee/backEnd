@@ -1,20 +1,4 @@
-import admin from "firebase-admin";
-import fs from "fs";
-
-const serviceAccount = JSON.parse(
-  fs.readFileSync(
-    "./db/ecommerce-e95a6-firebase-adminsdk-2tonm-29f817750f.json"
-  )
-);
-
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-});
-
-console.log("conectado");
-
-const db = admin.firestore();
-const query = db.collection("carrito");
+import query from "../db/firebaseDB.js";
 
 class CarritoFB {
   constructor() {}

@@ -1,0 +1,23 @@
+<div>
+    <h2>Carrito de compra</h2>
+</div>
+<div class="container-fluid">
+    <div>
+        <h3>Id: {{carrito}}</h3>
+            <div>
+                {{#each productos}}
+                    {{#with this}}
+                        <div class="card" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{nombre}}</h5>
+                            <p class="card-text">{{descripcion}}</p>
+                            <p class="card-text">$ {{precio}}</p>
+                        </div>
+                        </div>
+                    {{/with}}
+                {{/each}}
+        </div>
+        <button class=" btn btn-primary my-5" onclick="location.href='/api/wapp'">Finalizar Compra</button>
+    </div>
+</div>

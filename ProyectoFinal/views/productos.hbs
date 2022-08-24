@@ -1,0 +1,23 @@
+        <div class="tabla">
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Foto</th>
+                    </tr>
+                </thead>
+                <tbody id="products">
+                    {{#each productos}}
+                    <tr>
+                        <td>{{nombre}}</td>
+                        <td>{{precio}}</td>
+                        <td>{{foto}}</td>
+                        <td>
+                            <button onclick="location.href='/users/signup'">Comprar</button>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
