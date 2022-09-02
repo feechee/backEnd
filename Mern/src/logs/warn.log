@@ -1,0 +1,91 @@
+warn: Ruta GET /a no implementada
+warn: Ruta GET /css/style.css no implementada
+warn: Ruta GET /js/cliente.js no implementada
+warn: Ruta GET /js/cliente.js no implementada
+warn: Ruta GET /css/style.css no implementada
+warn: Ruta GET /css/style.css no implementada
+warn: Ruta GET /js/cliente.js no implementada
+warn: Ruta GET /js/cliente.js no implementada
+warn: Ruta GET /css/style.css no implementada
+warn: Ruta GET /socket.io/?EIO=4&transport=polling&t=O9LyoVw no implementada
+warn: Ruta GET /socket.io/?EIO=4&transport=polling&t=O9Lyox1 no implementada
+warn: Ruta GET /socket.io/?EIO=4&transport=polling&t=O9Lypwg no implementada
+warn: Ruta GET /socket.io/?EIO=4&transport=polling&t=O9LyrOP no implementada
+warn: Ruta GET /socket.io/?EIO=4&transport=polling&t=O9LyssI no implementada
+warn: Ruta GET /socket.io/?EIO=4&transport=polling&t=O9LyuGP no implementada
+warn: Ruta GET /socket.io/?EIO=4&transport=polling&t=O9Lyvnj no implementada
+warn: Ruta GET /socket.io/?EIO=4&transport=polling&t=O9LzBrx no implementada
+warn: Ruta GET /api/carrito/k3z1Ke9tJmjz4GWAknOh/productos/62b382b99c517b54ea335892 no implementada
+warn: Ruta GET /api/carrito/k3z1Ke9tJmjz4GWAknOh/productos/62b382b99c517b54ea335892 no implementada
+error: undefined
+error: undefined
+error: undefined
+warn: Ruta POST /api/carrito/k3z1Ke9tJmjz4GWAknOh/productos/ no implementada
+warn: Ruta GET /api/carrito/k3z1Ke9tJmjz4GWAknOh/productos/ no implementada
+warn: Ruta GET /api/carrito/k3z1Ke9tJmjz4GWAknOh/productos/ no implementada
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined {"_message":"productos validation failed","errors":{"codigo":{"kind":"required","message":"Path `codigo` is required.","name":"ValidatorError","path":"codigo","properties":{"message":"Path `codigo` is required.","path":"codigo","type":"required"}},"descripcion":{"kind":"required","message":"Path `descripcion` is required.","name":"ValidatorError","path":"descripcion","properties":{"message":"Path `descripcion` is required.","path":"descripcion","type":"required"}},"foto":{"kind":"required","message":"Path `foto` is required.","name":"ValidatorError","path":"foto","properties":{"message":"Path `foto` is required.","path":"foto","type":"required"}},"nombre":{"kind":"required","message":"Path `nombre` is required.","name":"ValidatorError","path":"nombre","properties":{"message":"Path `nombre` is required.","path":"nombre","type":"required"}},"precio":{"kind":"required","message":"Path `precio` is required.","name":"ValidatorError","path":"precio","properties":{"message":"Path `precio` is required.","path":"precio","type":"required"}},"stock":{"kind":"required","message":"Path `stock` is required.","name":"ValidatorError","path":"stock","properties":{"message":"Path `stock` is required.","path":"stock","type":"required"}}}}
+warn: Ruta GET /api/carrito/k3z1Ke9tJmjz4GWAknOh/productos no implementada
+error: undefined
+error: undefined
+error: undefined
+error: undefined {"code":5,"details":"No document to update: projects/ecommerce-e95a6/databases/(default)/documents/carrito/62b382b99c517b54ea335892","metadata":{},"note":"Exception occurred in retry method that was not classified as transient"}
+warn: Ruta DELETE /api/carrito/k3z1Ke9tJmjz4GWAknOh/productos/62b382b99c517b54ea335892 no implementada
+error: undefined
+warn: Ruta GET /carrito no implementada
+warn: Ruta GET /api/users/signin no implementada
+warn: Ruta GET /api/productos-test no implementada
+warn: Ruta GET /api no implementada
+warn: Ruta GET /api/productos-test no implementada
+warn: Ruta GET /api/productos-test no implementada
+warn: Ruta GET /api/productos-test no implementada
+warn: Ruta GET /api/productos-test no implementada
+warn: Ruta GET /api/productos-test no implementada
+warn: Ruta GET /api/productos-test no implementada
+warn: Ruta GET /api/productos-test no implementada
+warn: Ruta GET /api/productos-test no implementada
+warn: Ruta GET /api/productos-test no implementada
+warn: Ruta GET /api/productos-test no implementada
+warn: Ruta GET /api/productos-test no implementada
+warn: Ruta GET /api/productos-test no implementada
+warn: Ruta GET /api/productos-test no implementada
+warn: Ruta GET /api/productos-test no implementada
+warn: Ruta GET /api/productos-test no implementada
+error: undefined
+error: undefined
+error: undefined {"code":20003,"moreInfo":"https://www.twilio.com/docs/errors/20003","status":401}
+error: undefined {"code":20003,"moreInfo":"https://www.twilio.com/docs/errors/20003","status":401}
+error: undefined {"code":20003,"moreInfo":"https://www.twilio.com/docs/errors/20003","status":401}
+error: undefined {"code":20003,"moreInfo":"https://www.twilio.com/docs/errors/20003","status":401}
+error: undefined {"code":21606,"moreInfo":"https://www.twilio.com/docs/errors/21606","status":400}
+warn: Ruta GET /api/productos-test no implementada
+warn: Ruta GET /api/carrito/FjCSlFcoB18zrUMCaPl0XXAfIHbsnx9e/productos no implementada
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined

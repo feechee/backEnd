@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-md-4 mx-auto">
+            <div class="card">
+                    <div class="card-header">
+                        Informacion
+                    </div>
+                        <div class="card-body">
+                            <strong>Argumentos:</strong>
+                            {{#each argumentos}}
+                                
+                                <p>{{this}}</p>
+            
+                            {{/each}}
+                            <strong>Plataforma:</strong>
+                                <p>{{plataforma}}</p>
+                            <strong>Version:</strong>
+                                <p>{{version}}</p>                             
+                            <strong>Ejecucion:</strong>
+                                <p>{{ejecutable}}</p>     
+                            <strong>Id proceso:</strong>
+                                <p>{{id}}</p>
+                            <strong>Memoria:</strong>
+                                <p>{{memoria}}</p>
+                            <strong>Carpeta:</strong>
+                                <p>{{carpeta}}</p>
+                            
+                        </div>            
+                    </div>
+            </div>
+    </div>
+</div>
