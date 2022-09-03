@@ -63,7 +63,7 @@ carritoCtrl.listarProductos = async (req, res, next) =>{
         const { id } = req.params;
         const productos = await apiCarrito.getIdProductos(id)
         const carrito = id
-        res.send({ carrito: carrito, productos: '1' });
+        res.send({ carrito: carrito, productos: productos });
     } catch (error) {
         logger.error(error)
         next(error);

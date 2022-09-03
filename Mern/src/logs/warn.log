@@ -89,3 +89,7 @@ error: undefined
 error: undefined
 error: undefined
 error: undefined
+warn: Ruta GET /api/productos-test no implementada
+warn: Ruta GET /api/carrito/k3z1Ke9tJmjz4GWAknOh/productos/62b382b99c517b54ea335892 no implementada
+error: undefined {"code":20003,"moreInfo":"https://www.twilio.com/docs/errors/20003","status":401}
+warn: Ruta GET /api/mail/k3z1Ke9tJmjz4GWAknOh no implementada

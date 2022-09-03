@@ -63,3 +63,15 @@ warn: Ruta GET /... no implementada
 warn: Ruta GET /api/carrito/y8m3G5FEBUJ7Bu9FevWK/... no implementada
 warn: Ruta GET /... no implementada
 warn: Ruta GET /api/carrito/y8m3G5FEBUJ7Bu9FevWK/... no implementada
+warn: Ruta GET /... no implementada
+warn: Ruta GET /... no implementada
+warn: Ruta GET /api/carrito/y8m3G5FEBUJ7Bu9FevWK/... no implementada
+error: undefined {"code":20003,"moreInfo":"https://www.twilio.com/docs/errors/20003","status":401}
+warn: Ruta GET /... no implementada
+warn: Ruta GET /... no implementada
+warn: Ruta GET /... no implementada
+warn: Ruta GET /... no implementada
+warn: Ruta GET /... no implementada
+warn: Ruta GET /... no implementada
+warn: Ruta GET /... no implementada
+error: undefined {"code":20003,"moreInfo":"https://www.twilio.com/docs/errors/20003","status":401}

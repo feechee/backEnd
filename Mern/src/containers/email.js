@@ -20,18 +20,21 @@ class Email {
 
     async enviarEmail (id, usuario) {
         const mensaje = []
+        
         try {
             const contenido = await apiCarrito.getIdProductos(id)
             contenido.map((cont)=>{
                 mensaje.push(cont.nombre)
+                console.log(mensaje);
             })
             const asunto = `El usuario: ${usuario} realizo una compra`
             const info = await transporter.sendMail({
                 from:'evert.ferry15@ethereal.email',
                 to:'fedelop_10@hotmail.com',
                 subject: asunto,
-                text: mensaje,
+                text: `Productos comprados: ${mensaje}`,
             })
+            return {mensaje: "Email enviado correctamente"}
         } catch (error) {
             logger.error(error);
         }

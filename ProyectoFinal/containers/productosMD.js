@@ -19,7 +19,7 @@ class ProductosMD {
       const contenido = await models.productos.findOne({ _id: id });
       return contenido;
     } catch (err) {
-      return logger.error("Error de lectura", err);
+      return console.log("Error de lectura", err);
     }
   }
 

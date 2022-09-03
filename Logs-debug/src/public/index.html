@@ -12,51 +12,7 @@
     <title>Mi Aplicación</title>
 </head>
 <body>
-    <div class="contenedor">
-        <div class="log">
-            <div id="usuario"></div>
-            <button class="logOut btn btn-danger my-5" onclick="location.href='/users/logout'">Logout</button>
-        </div>
-
-        <div class="tabla">
-            <table class="table table-dark table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Precio</th>
-                        <th scope="col">Foto</th>
-                    </tr>
-                </thead>
-                <tbody id="products">
-
-                </tbody>
-            </table>
-        </div>
-
-        <div class="chat">
-            <h1>Chat</h1>
-            <form onsubmit="return addMessage(this)">
-                    <input class="form-control" type="email" id="username"
-                    placeholder="email" required>
-                    <input class="form-control" type="text" id="name"
-                    placeholder="Nombre" required>
-                    <input class="form-control" type="text" id="lastName"
-                    placeholder="Apellido" required>
-                    <input class="form-control" type="number" id="age"
-                    placeholder="Edad" required>
-                    <input class="form-control" type="text" id="alias"
-                    placeholder="Alias" required>
-                    <input class="form-control" type="text" id="avatar"
-                    placeholder="Avatar" required>
-
-                    <input type="text" class="form-control" id="text"
-                    placeholder="Cuentanos algo...">
-                    
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
-            <div id="messages"></div>>
-        </div>
-    </div>
+    <h1>Instrucciones</h1>
     <script src="/static/js/cliente.js" type="module"></script>
 </body>
 </html>

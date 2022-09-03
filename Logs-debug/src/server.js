@@ -8,9 +8,7 @@ import routerVista from "./router/vistas.routes.js";
 import routerProductos from './router/productos.routes.js';
 import routerInfo from './router/info.routes.js';
 import routerUsers from './router/users.routes.js';
-import routerRandom from './router/random.routes.js';
 import { createServer } from "http";
-import { Server } from "socket.io";
 import Mensajes from "./containers/mensajes.js"
 import MongoStore from 'connect-mongo'
 import session from 'express-session'
@@ -75,7 +73,6 @@ app.use(routerVista);
 app.use(routerProductos);
 app.use(routerUsers)
 app.use(routerInfo)
-app.use(routerRandom)
 app.all('*', (req, res) => {
   const { url, method } = req
   logger.warn(`Ruta ${method} ${url} no implementada`)
@@ -83,14 +80,4 @@ app.all('*', (req, res) => {
 })
 
 
-io.on("connection", async (socket) => {
-    console.log("Cliente conectado");
-    socket.emit("messages", await newMensaje.getAll());
-    socket.on("new-message",async (data) => {
-      await newMensaje.insertarMensajes(data)
-      io.sockets.emit("messages",await newMensaje.getAll());
-    });
-  });
-
-
-export {app, io};
+export {app};
